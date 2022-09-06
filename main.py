@@ -1,4 +1,3 @@
-from re import X
 from turtle  import Screen, Turtle, color, penup
 
 screen = Screen()
@@ -15,7 +14,6 @@ for parte_corpo in lista_posicao:               #loop para cirar 3 partes do cor
     nova_parte.penup()                          #retira o rastro quando movimenta
     nova_parte.goto(parte_corpo)                #posicao inicial recebe a posicao da lista_posicao conforme o loop
     lista_corpo.append(nova_parte)              #lista de corpo recebe tres partes de corpo.
-
     
 
 
