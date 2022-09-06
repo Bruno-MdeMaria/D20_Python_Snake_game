@@ -4,6 +4,8 @@ screen = Screen()
 screen.setup(width= 600, height= 600)   #tamanho do screnn em pixels
 screen.bgcolor("black")      #altera a cor da tela
 screen.title("Snake Game")   #adiciona um ítulo a tela
+screen.tracer(0,25)             #desligar o rastreador colocando 0 para mostrar uma nova imagem de cada vez.
+                             #para aparecer a movimentacao deverá ser iniaco o update do screnn abaixo do loop
 
 lista_corpo = []
 lista_posicao = [(0,0), (-20, 0), (-40, 0)]   #tupla com a posição inicial(goto) x= e y=
@@ -16,6 +18,7 @@ for parte_corpo in lista_posicao:               #loop para cirar 3 partes do cor
     nova_parte.goto(parte_corpo)                #posicao inicial recebe a posicao da lista_posicao conforme o loop
     lista_corpo.append(nova_parte)              #lista de corpo recebe tres partes de corpo.
     
+#screen.update()           #inicia o screen 
 
 game_iniciado = True
 while game_iniciado:
