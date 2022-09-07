@@ -18,10 +18,10 @@ snake = Snake()
 
 #OUVIR O TECLADO (.listen):
 screen.listen()
-screen.onkey("Up")
-screen.onkey("Down")
-screen.onkey("Left")
-screen.onkey("Right")
+screen.onkey(snake.up,"Up")     #quando ouvir up chamará o MÉTODO snake.up criado na CLASSE snake.
+screen.onkey(snake.down,"Down")
+screen.onkey(snake.left,"Left")
+screen.onkey(snake.right,"Right")
 
 
 
