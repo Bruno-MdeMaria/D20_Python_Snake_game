@@ -2,6 +2,11 @@ from turtle import Turtle
 
 POSICAO_INICIAL = [(0,0), (-20, 0), (-40, 0)]   #constante e, tupla com a posição inicial(goto) x= e y=
 MOVER_DISTANCIA = 20
+#constante relacionado ao movimento: 90 graus move para cima e assim por diante:
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 
 class Snake:
     #AQUI DEFINIMOS OS ATRIBUTOS:
@@ -36,13 +41,14 @@ class Snake:
     #adicionado MÉTODOS para mover conforme as direções do teclado:
     
     def up(self):
-        self.cabeça.setheading(90)  #parte [0]do corpo é a cabeça que queremos movimentar. podemos incluir um nome como cabeça. e se está para cima é 90 graus. SETHEADING é um método da TURTLE.
+        if self.cabeça.heading() != DOWN
+        self.cabeça.setheading(UP)  #parte [0]do corpo é a cabeça que queremos movimentar. Incluido um nome como cabeça. e se está para cima é 90 graus. SETHEADING é um método da TURTLE.
         
     def down(self):
-        self.cabeça.setheading(270)
+        self.cabeça.setheading(DOWN)
 
     def left(self):
-        self.cabeça.setheading(180)
+        self.cabeça.setheading(LEFT)
 
     def right(self):
-        self.cabeça.setheading(0)
+        self.cabeça.setheading(RIGHT)
