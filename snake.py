@@ -2,11 +2,16 @@ from turtle import Turtle
 
 POSICAO_INICIAL = [(0,0), (-20, 0), (-40, 0)]   #constante e, tupla com a posição inicial(goto) x= e y=
 MOVER_DISTANCIA = 20
-#constante relacionado ao movimento: 90 graus move para cima e assim por diante:
+#constante relacionado ao movimento: 90 graus da posição que está o objeto move para cima e assim por diante:
 UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
+
+#PARA PRODUZIR DOCUMENTAÇÃO:
+#esta classe até o momento tem:
+#ATRIBUTOS: criar_snake  /  lista de partes_corpo /  cabeça
+#METODOS: .criar_snake  /  .mover  / .up  /  .down  /  .left  /  .right
 
 class Snake:
     #AQUI DEFINIMOS OS ATRIBUTOS:
