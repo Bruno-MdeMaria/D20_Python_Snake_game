@@ -2,18 +2,27 @@ from turtle  import Screen, Turtle, color, penup
 import time
 from snake import Snake   #importando a biblioteca criada e a classe snake.
 
-snake = Snake()    #CRIANDO UM OBJETO (snake) ATRAVÉS DA CLASSE CRIADA
 
-
-
-
-#parte reclaiocnada a TELA:
+#parte relacionada a TELA:
 screen = Screen()
 screen.setup(width= 600, height= 600)   #tamanho do screnn em pixels
 screen.bgcolor("black")      #altera a cor da tela
 screen.title("Snake Game")   #adiciona um ítulo a tela
 screen.tracer(0)             #desligar o rastreador colocando 0 para mostrar uma nova imagem de cada vez.
                              #para aparecer a movimentacao deverá ser iniaco o update do screnn abaixo do while
+
+
+
+#CRIANDO UM OBJETO (snake) ATRAVÉS DA CLASSE CRIADA:
+snake = Snake()    
+
+#OUVIR O TECLADO (.listen):
+screen.listen()
+screen.onkey("Up")
+screen.onkey("Down")
+screen.onkey("Left")
+screen.onkey("Right")
+
 
 
 game_iniciado = True
