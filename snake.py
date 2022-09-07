@@ -4,9 +4,11 @@ POSICAO_INICIAL = [(0,0), (-20, 0), (-40, 0)]   #constante e, tupla com a posiç
 MOVER_DISTANCIA = 20
 
 class Snake:
+    #AQUI DEFINIMOS OS ATRIBUTOS:
     def __init__(self):  # _init_para atribuir valores p propriedades do objeto ou operações quandoobjeto for criado:
-       self.partes_corpo = []
+       self.partes_corpo = []         
        self.criar_snake()
+       self.cabeça = self.partes_corpo[0]   #foi incluido depois..atributo cabeça: definido que a cabeça será a parte [0] do corpo
 
 
     #adionando um MÉTODO para criar a snake.:
@@ -28,19 +30,19 @@ class Snake:
             nova_posx = self.partes_corpo[numero_parte -1].xcor()      #Andar com a calda seguindo a cabeça 
             nova_posy = self.partes_corpo[numero_parte -1].ycor()
             self.partes_corpo[numero_parte].goto(nova_posx, nova_posy)
-        self.partes_corpo[0].forward(MOVER_DISTANCIA)
+        self.cabeça.forward(MOVER_DISTANCIA)
         
-    #SEMPRE DENTRO(IDENTADO) DA CLASSE SNAKE:
+    #SEMPRE DENTRO(IDENTAÇÃO) DA CLASSE SNAKE:
     #adicionado MÉTODOS para mover conforme as direções do teclado:
     
     def up(self):
-        self.partes_corpo[0].setheading(90)  #parte [0]do corpo é a cabeça que queremos movimentar. podemos incluir um nome como cabeça. e se está para cima é 90 graus.
+        self.cabeça.setheading(90)  #parte [0]do corpo é a cabeça que queremos movimentar. podemos incluir um nome como cabeça. e se está para cima é 90 graus. SETHEADING é um método da TURTLE.
         
     def down(self):
-        self.partes_corpo[0].setheading(270)
+        self.cabeça.setheading(270)
 
     def left(self):
-        self.partes_corpo[0].setheading(180)
+        self.cabeça.setheading(180)
 
     def right(self):
-        self.partes_corpo[0].setheading(0)
+        self.cabeça.setheading(0)
