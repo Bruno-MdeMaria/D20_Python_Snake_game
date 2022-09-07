@@ -19,10 +19,9 @@ class Snake:
 
     def mover(self):
         for numero_parte in range(len(self.partes_corpo) -1, 0,-1):    #para alternar as posiçoes do corpo. 
-        nova_posx = lista_corpo[numero_parte -1].xcor()      #Andar seguindo o primeiro 
-        nova_posy = lista_corpo[numero_parte -1].ycor()
-        lista_corpo[numero_parte].goto(nova_posx, nova_posy)
+            nova_posx = self.partes_corpo[numero_parte -1].xcor()      #Andar com a calda seguindo a cabeça 
+            nova_posy = self.partes_corpo[numero_parte -1].ycor()
+            self.partes_corpo[numero_parte].goto(nova_posx, nova_posy)
         
-posicao[0].forward(20)
 
     
