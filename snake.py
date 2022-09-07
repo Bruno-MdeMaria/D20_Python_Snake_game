@@ -41,14 +41,18 @@ class Snake:
     #adicionado MÉTODOS para mover conforme as direções do teclado:
     
     def up(self):
-        if self.cabeça.heading() != DOWN
-        self.cabeça.setheading(UP)  #parte [0]do corpo é a cabeça que queremos movimentar. Incluido um nome como cabeça. e se está para cima é 90 graus. SETHEADING é um método da TURTLE.
+        if self.cabeça.heading() != DOWN: #IF para evitar que a serpente volte para atrás(ande sempre para frente).  
+        #Se posição(heading método Turtle) não for igual(!=) para baixo, então pode seguir o código e subir:
+                self.cabeça.setheading(UP)  #parte [0]do corpo é a cabeça que queremos movimentar. Incluido um nome como cabeça. e se está para cima é 90 graus. SETHEADING é um método da TURTLE.
         
     def down(self):
-        self.cabeça.setheading(DOWN)
+        if self.cabeça.heading() != UP:
+            self.cabeça.setheading(DOWN)
 
     def left(self):
-        self.cabeça.setheading(LEFT)
+        if self.cabeça.heading() != RIGHT:
+            self.cabeça.setheading(LEFT)
 
     def right(self):
-        self.cabeça.setheading(RIGHT)
+        if self.cabeça.heading() != LEFT:
+            self.cabeça.setheading(RIGHT)
