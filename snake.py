@@ -33,10 +33,13 @@ class Snake:
     #SEMPRE DENTRO(IDENTADO) DA CLASSE SNAKE:
     #adicionado MÉTODOS para mover conforme as direções do teclado:
     def up(self):
-        
+        self.partes_corpo[0].cabeça(90)  #parte [0]do corpo é a cabeça que queremos movimentar. podemos incluir um nome como cabeça. e se está para cima é 90 graus.
         
     def down(self):
-    
+        self.partes_corpo[0].cabeça(270)
+
     def left(self):
-    
+        self.partes_corpo[0].cabeça(180)
+
     def right(self):
+        self.partes_corpo[0].cabeça(0)
