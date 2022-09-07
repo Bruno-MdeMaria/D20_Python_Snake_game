@@ -17,6 +17,12 @@ class Snake:
             nova_parte.goto(posicao)               #posicao inicial recebe a posicao da lista_posicao conforme o loop
             self.partes_corpo.append(nova_parte)         #lista [] partes_corpo recebe tres partes de corpo.
 
-    
+    def mover(self):
+        for numero_parte in range(len(self.partes_corpo) -1, 0,-1):    #para alternar as posiçoes do corpo. 
+        nova_posx = lista_corpo[numero_parte -1].xcor()      #Andar seguindo o primeiro 
+        nova_posy = lista_corpo[numero_parte -1].ycor()
+        lista_corpo[numero_parte].goto(nova_posx, nova_posy)
+        
+posicao[0].forward(20)
 
     
