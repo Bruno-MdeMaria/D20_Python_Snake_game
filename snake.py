@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 POSICAO_INICIAL = [(0,0), (-20, 0), (-40, 0)]   #constante e, tupla com a posição inicial(goto) x= e y=
-
+MOVER_DISTANCIA = 20
 
 class Snake:
     def __init__(self):  # _init_para atribuir valores p propriedades do objeto ou operações quandoobjeto for criado:
@@ -22,6 +22,7 @@ class Snake:
             nova_posx = self.partes_corpo[numero_parte -1].xcor()      #Andar com a calda seguindo a cabeça 
             nova_posy = self.partes_corpo[numero_parte -1].ycor()
             self.partes_corpo[numero_parte].goto(nova_posx, nova_posy)
+        self.partes_corpo[0].forward(MOVER_DISTANCIA)
         
 
     

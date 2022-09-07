@@ -20,7 +20,7 @@ game_iniciado = True
 while game_iniciado:
     screen.update()     #inicia o screen para fazer o movimento da snake
     time.sleep(0.1)     #necessário importar o modo TIME. Isto acrescenta um atraso de 0.1 segundo entre cada parte do corpo se mover.
-    
+    snake.mover()       #chamar o MÉTODO chamado MOVER
 
 
 
