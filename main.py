@@ -25,8 +25,8 @@ game_iniciado = True
 while game_iniciado:
     screen.update()     #inicia o screen para fazer o movimento da snake
     time.sleep(0.1)     #necessário importar o modo TIME. Isto acrescenta um atraso de 0.1 segundo entre cada parte do corpo se mover.
-    for numero_parte in range(len(lista_corpo) -1, 0,-1):
-        nova_posx = lista_corpo[numero_parte -1].xcor()
+    for numero_parte in range(len(lista_corpo) -1, 0,-1):    #para alternar as posiçoes do corpo. 
+        nova_posx = lista_corpo[numero_parte -1].xcor()      #Andar seguindo o primeiro 
         nova_posy = lista_corpo[numero_parte -1].ycor()
         lista_corpo[numero_parte].goto(nova_posx, nova_posy)
         
