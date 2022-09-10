@@ -8,7 +8,7 @@ class Food(Turtle):                  #CRIADO A CLASSE FOOD UTILIZANDO A CLASSE P
         super().__init__()           #importado da classe pai(super classe)
         self.shape("circle")         #utlizando os atributos da classe pai(Turtle) como .shape, .penup,.color
         self.penup()
-        self.shapesize()
+        self.shapesize(0.7, 0.7)
         self.color("blue")
         self.speed("fastest")
         random_x = random.randint(-280, 280)  #valor aleatório para posição x entre -280 e 280 em um tela de 600pxl
