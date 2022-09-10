@@ -2,6 +2,7 @@ from turtle  import Screen
 import time
 from snake import Snake   #importando a biblioteca criada e a classe snake.
 from food import Food
+from scoreboard import Scoreboard
 
 #parte relacionada a TELA:
 screen = Screen()
@@ -18,6 +19,9 @@ snake = Snake()
 
 #CRIANDO UM OBEJTO (food) ATRAVÉS DA CLASSE CRIADA NO MODO HERANÇA:
 food = Food()
+
+#CRIANDO UM OBJETO (scocreboard) ATRAVÉS DA CLASSE CRIADA NO MODO HERANÇA:
+scoreboard = Scoreboard()
 
 #OUVIR O TECLADO (.listen):
 screen.listen()
