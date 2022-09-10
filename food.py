@@ -11,6 +11,9 @@ class Food(Turtle):                  #CRIADO A CLASSE FOOD UTILIZANDO A CLASSE P
         self.shapesize(0.7, 0.7)
         self.color("blue")
         self.speed("fastest")
+        
+    
+    def aparecer(self):
         random_x = random.randint(-280, 280)  #valor aleatório para posição x entre -280 e 280 em um tela de 600pxl
         random_y = random.randint(-280, 280)
         self.goto(x=random_x, y=random_y)
