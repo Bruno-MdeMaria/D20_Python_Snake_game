@@ -11,6 +11,7 @@ class Food(Turtle):                  #CRIADO A CLASSE FOOD UTILIZANDO A CLASSE P
         self.shapesize(0.7, 0.7)
         self.color("blue")
         self.speed("fastest")
+        self.aparecer()
         
     
     def aparecer(self):
