@@ -16,6 +16,9 @@ screen.tracer(0)             #desligar o rastreador colocando 0 para mostrar uma
 #CRIANDO UM OBJETO (snake) ATRAVÉS DA CLASSE CRIADA:
 snake = Snake()    
 
+#CRIANDO UM OBEJTO (food) ATRAVÉS DA CLASSE CRIADA NO MODO HERANÇA:
+
+
 #OUVIR O TECLADO (.listen):
 screen.listen()
 screen.onkey(snake.up,"Up")     #quando ouvir up chamará o MÉTODO snake.up criado na CLASSE snake.
