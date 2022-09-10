@@ -1,7 +1,7 @@
-from turtle  import Screen, Turtle, color, penup
+from turtle  import Screen
 import time
 from snake import Snake   #importando a biblioteca criada e a classe snake.
-
+from food import Food
 
 #parte relacionada a TELA:
 screen = Screen()
@@ -17,7 +17,7 @@ screen.tracer(0)             #desligar o rastreador colocando 0 para mostrar uma
 snake = Snake()    
 
 #CRIANDO UM OBEJTO (food) ATRAVÉS DA CLASSE CRIADA NO MODO HERANÇA:
-
+food = Food()
 
 #OUVIR O TECLADO (.listen):
 screen.listen()
