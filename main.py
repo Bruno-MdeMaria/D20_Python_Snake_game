@@ -35,7 +35,7 @@ while game_iniciado:
     snake.mover()       #chamar o MÉTODO chamado MOVER
     #detectar a colisão da serpente com a comida:
     if snake.cabeça.distance(food) < 15:
-        pass
+        food.aparecer()
 
 
 
