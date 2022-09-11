@@ -39,7 +39,7 @@ class Snake:
 
     #ADICIOANDO UM MÉTODO PARA CRESCER QUANDO ELA COMER:
     def crescer(self):
-        self.nova_parte(self.partes_corpo[-1].position())
+        self.nova_parte(self.partes_corpo[-1].position()) #chama o metodo nova parte e coloca na posicao da lista de partes_corpo -1 que tem que ser a última(conforme doc. de listas python) e será acrescentado a position()uma função(método) da turtle.
 
 
     #adicionando um MÉTODO para mover a snake:
