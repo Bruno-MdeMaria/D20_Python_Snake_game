@@ -39,7 +39,8 @@ while game_iniciado:
     snake.mover()       #chamar o MÉTODO chamado MOVER
     #detectar a colisão da serpente com a comida:
     if snake.cabeça.distance(food) < 15:
-        food.aparecer()
+        food.aparecer()       #após importar a classe criada chamar o método .aparecer para aparecer a comida
+        scoreboard.pontuar()  #após importar a classe chamar o método .pontuar para marcar placar
 
 
 
