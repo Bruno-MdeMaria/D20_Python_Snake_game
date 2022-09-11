@@ -1,4 +1,4 @@
-from turtle import Turtle
+from turtle import Turtle, position
 
 POSICAO_INICIAL = [(0,0), (-20, 0), (-40, 0)]   #constante e, tupla com a posição inicial(goto) x= e y=
 MOVER_DISTANCIA = 20
@@ -25,7 +25,7 @@ class Snake:
 
     def criar_snake(self):   
         for posicao in POSICAO_INICIAL:               #loop para cirar 3 partes do corpo usando a lista_posicao
-            pass
+            self.nova_parte(posicao)
 
     #adicionando um MÉTODO para acrescentar partes do corpo da serpente:
 
@@ -36,6 +36,10 @@ class Snake:
             nova_parte.speed(1)                         #movimento mais lento(1,3,6,10,0) sendo o 0 super rápido.
             nova_parte.goto(posicao)               #posicao inicial recebe a posicao da lista_posicao conforme o loop
             self.partes_corpo.append(nova_parte)         #lista [] partes_corpo recebe tres partes de corpo.
+
+    #ADICIOANDO UM MÉTODO PARA CRESCER QUANDO ELA COMER:
+    def crescer(self):
+        self.nova_parte(self.partes_corpo[-1].position())
 
 
     #adicionando um MÉTODO para mover a snake:
