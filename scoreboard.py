@@ -1,14 +1,27 @@
 from turtle import Turtle
+ALIGN = "center"
+FONT = ("Courier", 14 , "normal")
+
 
 class Scoreboard(Turtle):
     def __init__(self):
-        super().__init__()
-        self.write("Pontuação = ", move=False, align="center", font= ('Arial', 8, "normal"))
-        self.pontuar()
+        super().__init__()  #hamando todos os atributos e métodos(turtle) para dentro de nossa classe
+        self.color("white")
+        self.penup()
+        self.hideturtle()     #método da Turtle faz desaparecer a seta ou qualquer outro formato da tartaruga.
+        self.goto(0,270)
+        self.pontos = 0
+        self.update_scoreboard() #método criado abaixo:
+        
+        
+    def update_scoreboard(self):         #este método vai atualizar a pontuação, pois dentro dos atributos ele nã funiona corretamente.
+        self.write(f"Pontos= {pontos} ", move=False, align=ALIGN, font= FONT)
 
     def pontuar(self):
-        placar = 0
-        self.pontuar_placar = placar + 1
+        self.pontos += 1     #aumenta um ponto toda vez que o método é chamado.
+        self.clear()         #método limpar da Turtle para não sobrepor os valores
+        
+        
 
 
 
