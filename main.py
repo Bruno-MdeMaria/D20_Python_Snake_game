@@ -53,6 +53,14 @@ while game_iniciado:
         game_iniciado = False
         scoreboard.game_over()
 
+    #DETECTAR COLISÃO DA SERPENTE COM A CALDA:
+    for parte in snake.partes_corpo:
+        if parte != snake.cabeça:
+            if snake.cabeça.distance(parte) <10:
+                game_iniciado = False
+                scoreboard.game_over()
+
+
 
 
 
