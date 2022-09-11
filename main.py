@@ -37,10 +37,16 @@ while game_iniciado:
     screen.update()     #inicia o screen para fazer o movimento da snake
     time.sleep(0.1)     #necessário importar o modo TIME. Isto acrescenta um atraso de 0.1 segundo entre cada parte do corpo se mover.
     snake.mover()       #chamar o MÉTODO chamado MOVER
-    #detectar a colisão da serpente com a comida:
+    
+    #DETECTAR A COLISÃO DA SERPTENTE COM A COMIDA:
     if snake.cabeça.distance(food) < 15:
         food.aparecer()       #após importar a classe criada chamar o método .aparecer para aparecer a comida
         scoreboard.pontuar()  #após importar a classe chamar o método .pontuar para marcar placar
+    
+    #DETECTAR COLISÃO DA SERPENTE COM A PAREDE:
+    if snake.cabeça.xcor() > 280 or snake.cabeça.xcor() < -280 or snake.cabeça.ycor() > 280 or snake.cabeça.ycor() < -280:
+        game_iniciado = False
+        scoreboard.game_over()
 
 
 
