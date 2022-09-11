@@ -25,6 +25,11 @@ class Snake:
 
     def criar_snake(self):   
         for posicao in POSICAO_INICIAL:               #loop para cirar 3 partes do corpo usando a lista_posicao
+            pass
+
+    #adicionando um MÉTODO para acrescentar partes do corpo da serpente:
+
+    def nova_parte(self, posicao):
             nova_parte = Turtle(shape="square")         #altera o formato da tataruga para quadrado(square)
             nova_parte.color("white")                   #altera a cor para branco
             nova_parte.penup()                          #ergue a caneta e retira o rastro quando se movimenta
