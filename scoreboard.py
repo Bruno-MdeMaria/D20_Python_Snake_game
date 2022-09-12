@@ -19,7 +19,7 @@ class Scoreboard(Turtle):
 
     def game_over(self):                 #informar ao jogador quando o jogo acabou
         self.goto(0,0)                   #aparecer no centro da tela e não no topo como no atributo inicial
-        self.write("GAME OVER", move=False, align=ALIGN, font= FONT)
+        self.write("GAME OVER", move=False, align=ALIGN, font= ("Courier", 20 , "bold"))
         
     def pontuar(self):
         self.pontos += 1     #aumenta um ponto toda vez que o método é chamado.

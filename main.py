@@ -59,11 +59,6 @@ while game_iniciado:
             game_iniciado = False
             scoreboard.game_over()
 
-
-
-
-
-
 screen.exitonclick()    #fechar a tela somente após um clique
 
 
