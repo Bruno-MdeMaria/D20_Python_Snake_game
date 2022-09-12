@@ -54,12 +54,10 @@ while game_iniciado:
         scoreboard.game_over()
 
     #DETECTAR COLISÃO DA SERPENTE COM A CALDA:   utilizar splice no python:
-    for parte in snake.partes_corpo:
-        if parte == snake.cabeça:
-           pass
-        elif snake.cabeça.distance(parte) <10:
-                game_iniciado = False
-                scoreboard.game_over()
+    for parte in snake.partes_corpo[1:]:      #FATIAR A LISTA DEIXANDO DE FORA O SEGUIMENTO 0(CABEÇA DA SERPENTE)
+        if snake.cabeça.distance(parte) <10:
+            game_iniciado = False
+            scoreboard.game_over()
 
 
 
