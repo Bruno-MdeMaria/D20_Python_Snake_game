@@ -9,7 +9,7 @@ class Scoreboard(Turtle):
         self.color("white")
         self.penup()
         self.hideturtle()     #método da Turtle faz desaparecer a seta ou qualquer outro formato da tartaruga.
-        self.goto(0,1170)
+        self.goto(0,770)
         self.pontos = 0
         self.update_scoreboard() #método criado abaixo:
         
