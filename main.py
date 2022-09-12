@@ -53,7 +53,7 @@ while game_iniciado:
         game_iniciado = False
         scoreboard.game_over()
 
-    #DETECTAR COLISÃO DA SERPENTE COM A CALDA:
+    #DETECTAR COLISÃO DA SERPENTE COM A CALDA:   utilizar splice no python:
     for parte in snake.partes_corpo:
         if parte == snake.cabeça:
             pass
