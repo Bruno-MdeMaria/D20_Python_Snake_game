@@ -6,7 +6,7 @@ from scoreboard import Scoreboard
 
 #parte relacionada a TELA:
 screen = Screen()
-screen.setup(width= 700, height= 700)   #tamanho do screnn em pixels
+screen.setup(width= 1400, height= 700)   #tamanho do screnn em pixels
 screen.bgcolor("black")      #altera a cor da tela
 screen.title("Snake Game")   #adiciona um ítulo a tela
 screen.tracer(0)             #desligar o rastreador colocando 0 para mostrar uma nova imagem de cada vez.
