@@ -6,7 +6,7 @@ from scoreboard import Scoreboard
 
 #parte relacionada a TELA:
 screen = Screen()
-screen.setup(width= 800, height= 800)   #tamanho do screnn em pixels
+screen.setup(width= 700, height= 700)   #tamanho do screnn em pixels
 screen.bgcolor("black")      #altera a cor da tela
 screen.title("Snake Game")   #adiciona um ítulo a tela
 screen.tracer(0)             #desligar o rastreador colocando 0 para mostrar uma nova imagem de cada vez.
@@ -49,7 +49,7 @@ while game_iniciado:
    
    
     #DETECTAR COLISÃO DA SERPENTE COM A PAREDE:
-    if snake.cabeça.xcor() > 780 or snake.cabeça.xcor() < -780 or snake.cabeça.ycor() > 780 or snake.cabeça.ycor() < -780:
+    if snake.cabeça.xcor() > 340 or snake.cabeça.xcor() < -340 or snake.cabeça.ycor() > 340 or snake.cabeça.ycor() < -340:
         game_iniciado = False
         scoreboard.game_over()
 
