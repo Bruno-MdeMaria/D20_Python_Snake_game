@@ -49,7 +49,7 @@ while game_iniciado:
    
    
     #DETECTAR COLISÃO DA SERPENTE COM A PAREDE:
-    if snake.cabeça.xcor() > 340 or snake.cabeça.xcor() < -340 or snake.cabeça.ycor() > 340 or snake.cabeça.ycor() < -340:
+    if snake.cabeça.xcor() > 670 or snake.cabeça.xcor() < -680 or snake.cabeça.ycor() > 340 or snake.cabeça.ycor() < -340:
         game_iniciado = False
         scoreboard.game_over()
 
