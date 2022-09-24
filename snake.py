@@ -11,7 +11,7 @@ RIGHT = 0
 #PARA PRODUZIR DOCUMENTAÇÃO:
 #esta classe até o momento tem:
 #ATRIBUTOS: criar_snake  /  lista de partes_corpo /  cabeça
-#METODOS: .criar_snake  /  .mover  / .up  /  .down  /  .left  /  .right
+#METODOS: .criar_snake  /  .mover  / .up  /  .down  /  .left  /  .right / .reset
 
 class Snake:
     #AQUI DEFINIMOS OS ATRIBUTOS:
@@ -22,13 +22,12 @@ class Snake:
 
 
     #adionando um MÉTODO para criar a snake.:
-
     def criar_snake(self):   
         for posicao in POSICAO_INICIAL:               #loop para cirar 3 partes do corpo usando a lista_posicao
             self.nova_parte(posicao)
 
-    #adicionando um MÉTODO para acrescentar partes do corpo da serpente:
 
+    #adicionando um MÉTODO para acrescentar partes do corpo da serpente:
     def nova_parte(self, posicao):
             nova_parte = Turtle(shape="square")         #altera o formato da tataruga para quadrado(square)
             nova_parte.color("white")                   #altera a cor para branco
@@ -37,13 +36,19 @@ class Snake:
             nova_parte.goto(posicao)               #posicao inicial recebe a posicao da lista_posicao conforme o loop
             self.partes_corpo.append(nova_parte)         #lista [] partes_corpo recebe tres partes de corpo.
 
+
+    #ADICIONADO UM METODO DE RESET PARA VOLTAR A APARECER QUANDO COLIDIR COM AS PAREDES E CALDA:
+    def reset(self):
+        self.crescer.clear()     #limpa todos as partes adicionadas a serpente para reiniciar pequena
+        self.criar_snake()       #cria uma nova serpente com apenas 3 partes(segmentos)
+
+
     #ADICIOANDO UM MÉTODO PARA CRESCER QUANDO ELA COMER:
     def crescer(self):
         self.nova_parte(self.partes_corpo[-1].position()) #chama o metodo nova parte e coloca na posicao da lista de partes_corpo -1 que tem que ser a última(conforme doc. de listas python) e será acrescentado a position()uma função(método) da turtle.
 
 
-    #adicionando um MÉTODO para mover a snake:
-
+    #ADICIONADO UM MÉTODO PARA MOVER A SERPENTE:
     def mover(self):
         for numero_parte in range(len(self.partes_corpo) -1, 0,-1):    #para alternar as posiçoes do corpo. 
             nova_posx = self.partes_corpo[numero_parte -1].xcor()      #Andar com a calda seguindo a cabeça 

@@ -50,14 +50,13 @@ while game_iniciado:
    
     #DETECTAR COLISÃO DA SERPENTE COM A PAREDE:
     if snake.cabeça.xcor() > 670 or snake.cabeça.xcor() < -680 or snake.cabeça.ycor() > 340 or snake.cabeça.ycor() < -340:
-        game_iniciado = False
-        scoreboard.game_over()
+        scoreboard.reset()
 
     #DETECTAR COLISÃO DA SERPENTE COM A CALDA:   utilizar splice no python:
     for parte in snake.partes_corpo[1:]:      #FATIAR A LISTA DEIXANDO DE FORA O SEGUIMENTO 0(CABEÇA DA SERPENTE)
         if snake.cabeça.distance(parte) <10:
-            game_iniciado = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            
 
 screen.exitonclick()    #fechar a tela somente após um clique
 
