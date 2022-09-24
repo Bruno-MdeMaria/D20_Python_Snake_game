@@ -1,3 +1,4 @@
+from statistics import mode
 from turtle import Turtle
 ALIGN = "center"
 FONT = ("Courier", 14 , "bold")
@@ -10,7 +11,8 @@ class Scoreboard(Turtle):
         self.penup()
         self.hideturtle()     #método da Turtle faz desaparecer a seta ou qualquer outro formato da tartaruga.
         self.goto(0,320)
-        self.recorde = 0
+        with open("data.txt", mode="r") as data:
+            self.recorde = int(data.read())
         self.pontos = 0
         self.update_scoreboard() #método criado abaixo:
         
