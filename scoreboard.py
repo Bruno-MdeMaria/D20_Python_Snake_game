@@ -16,12 +16,14 @@ class Scoreboard(Turtle):
         
         
     def update_scoreboard(self):         #este método vai atualizar a pontuação, pois dentro dos atributos ele nã funiona corretamente.
-        self.write(f"Pontos= {self.pontos} ", move=False, align=ALIGN, font= FONT)
+        self.clear()
+        self.write(f"Pontos= {self.pontos} Recorde: {self.recorde}", move=False, align=ALIGN, font= FONT)
     
     def reset(self):
         if self.pontos > self.recorde:   #atualizar recorde. se pontos for maior que recorde:
             self.recorde = self.pontos   #recorde recebe o valor de pontos.
         self.pontos = 0                  #após isso acontecer fora do if o valor de pontos volta a 0 para poder jogar novamente.
+        self.update_scoreboard           #atuaaliza o scoreboard
 
     # def game_over(self):                 #informar ao jogador quando o jogo acabou
     #     self.goto(0,0)                   #aparecer no centro da tela e não no topo como no atributo inicial
