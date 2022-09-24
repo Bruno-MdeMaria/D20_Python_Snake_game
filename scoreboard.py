@@ -6,10 +6,10 @@ FONT = ("Courier", 14 , "bold")
 
 class Scoreboard(Turtle):
     def __init__(self):
-        super().__init__()  #hamando todos os atributos e métodos(turtle) para dentro de nossa classe
+        super().__init__()  #chamando todos os atributos e métodos(turtle) para dentro da nossa classe
         self.color("white")
         self.penup()
-        self.hideturtle()     #método da Turtle faz desaparecer a seta ou qualquer outro formato da tartaruga.
+        self.hideturtle()     #método da Turtle que faz desaparecer a seta ou qualquer outro formato da tartaruga.
         self.goto(0,320)
         with open("data.txt", mode="r") as data:
             self.recorde = int(data.read())
@@ -23,7 +23,9 @@ class Scoreboard(Turtle):
     
     def reset(self):
         if self.pontos > self.recorde:   #atualizar recorde. se pontos for maior que recorde:
-            self.recorde = self.pontos   #recorde recebe o valor de pontos.
+            self.recorde = self.pontos  #recorde recebe o valor de pontos.
+            with open("data.txt", mode="w") as data:
+                data.write(f"{self.recorde}") 
         self.pontos = 0                  #após isso acontecer fora do if o valor de pontos volta a 0 para poder jogar novamente.
         self.update_scoreboard()         #atuaaliza o scoreboard
 
