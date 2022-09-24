@@ -41,6 +41,7 @@ class Snake:
     def reset(self):
         self.crescer.clear()     #limpa todos as partes adicionadas a serpente para reiniciar pequena
         self.criar_snake()       #cria uma nova serpente com apenas 3 partes(segmentos)
+        self.cabeça = self.partes_corpo[0]   #é algo um atributo(__init__) que tbm precisa ser recriado
 
 
     #ADICIOANDO UM MÉTODO PARA CRESCER QUANDO ELA COMER:
