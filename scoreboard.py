@@ -19,7 +19,9 @@ class Scoreboard(Turtle):
         self.write(f"Pontos= {self.pontos} ", move=False, align=ALIGN, font= FONT)
     
     def reset(self):
-        pass
+        if self.pontos > self.recorde:   #atualizar recorde. se pontos for maior que recorde:
+            self.recorde = self.pontos   #recorde recebe o valor de pontos.
+        self.pontos = 0                  #após isso acontecer fora do if o valor de pontos volta a 0 para poder jogar novamente.
 
     # def game_over(self):                 #informar ao jogador quando o jogo acabou
     #     self.goto(0,0)                   #aparecer no centro da tela e não no topo como no atributo inicial
